@@ -35,3 +35,32 @@
 /* SELECT DISTINCT Composer from Track; */
 /* SELECT DISTINCT BillingPostalCode from Invoice; */
 /* SELECT DISTINCT Company from Customer; */
+
+/* delete from practive_delete where Type="Bronze"
+delete from practice_delete where Type="silver"; */
+/* delete from practice_delete where Value=150; */
+
+
+/*  Create table users(user_id integer primary key autoincrement,name text,email text);
+Create table Products(Product_num integer primary key autoincrement,name text, price integer); */
+/* Create table Orders(order_num integer primary key autoincrement,
+                    user_id integer references users(user_id),
+                    product_num integer references Products(Product_num)); */
+ 
+/* insert into users(name,email)
+values("Jacob", "Jake.Andy@yahoo.com"),
+("Joseph", "Joe.Andy@gmail.com"),
+("Jarid", "Jarid.mamosa@aol.com");
+insert into Products(name,price)
+values("Chocolate Chip Cookies", 8.99),
+("Cheetos", 9.99),
+("Oreos", 4.99)  */
+
+
+
+/* insert into Orders(product_num,user_id)
+values(1,2),(2,3),(3,1); */
+/* select * from Orders */
+/* select * from Products where Product_num=(select product_num from Orders where product_num=1); */
+/* select * from Orders */
+/* SELECT * from Orders where user_id=1; */
