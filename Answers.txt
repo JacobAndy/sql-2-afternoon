@@ -1,0 +1,27 @@
+/* select * from InvoiceLine where UnitPrice > 0.99 */
+/* select c.FirstName, c.LastName, i.InvoiceDate, i.Total from Invoice i join Customer c where c.CustomerId = i.CustomerId; */
+/* select c.FirstName, c.LastName,e.FirstName, e.LastNamefrom Customer c join Employee e where c.CustomerId = e.EmployeeId; */
+/* select al.Title, ar.Name from Album al join Artist ar where al.ArtistId = ar.ArtistId; */
+/* select pt.TrackId from PlaylistTrack pt join Playlist pl on pl.PlaylistId = pt.PlaylistIdwhere pl.name = 'Music' */
+/* select tr.Name from Track tr join PlaylistTrack pl ON pl.TrackId = tr.TrackId; */
+/* select tr.Name, p.Name from Track trjoin Playlist p ON tr.AlbumId = p.PlaylistId */
+/* SELECT tr.Name, al.Title, g.Name FROM track tr JOIN Album al ON tr.AlbumId = al.AlbumID JOIN Genre g ON g.GenreID = tr.GenreId where g.Name = "Alternative"; */
+
+
+
+
+/* select * from Invoice where (select UnitPrice from InvoiceLine where UnitPrice > 0.99); */
+/* select * FROM PlaylistTrack where PlaylistId= (select PlaylistId from Playlist where Name = "Music"); */
+/* select * from Track where TrackId=(select TrackId from PlaylistTrack where PlaylistId = 5) */
+/* select * from Track where GenreId=(select GenreId from Genre where Name="Comedy" ) */
+/* select * from Track where AlbumId=(select AlbumId from Album where Title="Fireball") */
+/* select * from Track where AlbumId=(select AlbumId from Album where ArtistId=(select ArtistId from Artist where Name="Queen")); */
+
+
+
+
+/* update Customer set Fax= NULL where Fax IS NOT NULL; */
+/* UPDATE Customer set Company="Self" where Company IS NULL; */
+/* UPDATE Customer set LastName="Thompson" where CustomerId=(select CustomerId from Customer where FirstName="Julia" AND LastName="Barnett") */
+/* UPDATE Track set Composer="The darkness around us" where GenreId=(select GenreId from Genre where Name="Metal") */
+*********************************************REFRESH PAGE TO DELETE ALL UPDATES DONE TO DATABASE******************************
