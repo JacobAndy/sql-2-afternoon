@@ -25,3 +25,13 @@
 /* UPDATE Customer set LastName="Thompson" where CustomerId=(select CustomerId from Customer where FirstName="Julia" AND LastName="Barnett") */
 /* UPDATE Track set Composer="The darkness around us" where GenreId=(select GenreId from Genre where Name="Metal") */
 *********************************************REFRESH PAGE TO DELETE ALL UPDATES DONE TO DATABASE******************************
+
+/* select count(*), g.Name from Track tr JOIN Genre g ON tr.GenreId = g.GenreId GROUP BY g.Name; */
+/* select count(*), g.Name from Track t join Genre g ON g.GenreId = t.GenreId WHERE g.Name="Pop" OR g.Name="Rock" GROUP BY g.Name */
+/* select count(*), ar.Name from Album al join Artist ar ON ar.ArtistId = al.ArtistId GROUP BY ar.Name */
+
+
+
+/* SELECT DISTINCT Composer from Track; */
+/* SELECT DISTINCT BillingPostalCode from Invoice; */
+/* SELECT DISTINCT Company from Customer; */
